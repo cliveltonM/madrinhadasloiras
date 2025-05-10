@@ -4,3 +4,428 @@
     --contrast: #560A20;
     --white: #fff;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: .5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--contrast);
+    transition: opacity ease-in-out .2s;
+}
+
+nav a:hover {
+    opacity: .8;
+}
+
+.logo {
+    width: 200px;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social svg {
+    width: 40px;
+    transition: opacity ease-in-out .2s;
+}
+
+.social svg:hover {
+    opacity: .8;
+}
+
+main {
+    width: 100%;
+}
+
+/*Hero section*/
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--primary);
+    object-fit: contain;
+    position: relative;
+
+    margin-bottom: 150px;
+
+    padding: 1rem;
+}
+
+.hero::after {
+    content: '';
+    background: var(--primary);
+    position: absolute;
+    width: 100%;
+    height: 300px;
+
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero-img {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    width: 300px;
+    margin-right: 5rem;
+}
+
+.hero-img img:first-child {
+    height: 250px;
+}
+
+.hero-img img + img {
+    min-width: 200px;
+}
+
+.hero-text {
+    font-size: 3rem;
+    color: var(--contrast);
+    font-family: 'Cormorant Garamond', serif;
+
+    max-width: 450px;
+}
+
+.hero-text .first {
+    letter-spacing: .5rem;
+}
+
+.hero-text p:first-child + p {
+    display: flex;
+    gap: 1.5rem;
+    letter-spacing: .3rem;
+}
+
+.hero-text .caps {
+    font-size: 4rem;
+}
+
+.hero-text .info {
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+
+    display: flex;
+    justify-content: center;
+}
+
+/*Schedule section*/
+
+.schedule {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 1rem;
+    position: relative;
+    z-index: 300;
+}
+
+.schedule::after {
+    content: '';
+    width: 100%;
+    height: 300px;
+
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    background: var(--white);
+
+    border-radius: 50%;
+}
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    color: var(--contrast);
+
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: var(--contrast);
+}
+
+.schedule-img {
+    width: 300px;
+}
+
+.schedule-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-text p {
+    margin-bottom: 2rem;
+}
+
+.btn-solid {
+    background: var(--primary);
+    color: var(--contrast);
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    padding: 1rem;
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-end-end-radius: 30px;
+    border-start-start-radius: 30px;
+
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+}
+
+.btn-solid:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+/*Services Section*/
+
+.services {
+    background: var(--primary);
+    padding-top: 200px;
+    padding-bottom: 4rem;
+
+    z-index: -100;
+
+    text-align: center;
+}
+
+.services .title {
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+}
+
+.card figure {
+    width: 250px;
+}
+
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: .1rem;
+
+    color: var(--contrast);
+}
+
+.card-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    border: solid 1px var(--contrast);
+    border-end-end-radius: 30px;
+    border-start-start-radius: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    color: var(--contrast);
+    font-weight: 600;
+    transition: all ease-in-out .2s;
+
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+}
+
+/*Reviews Section*/
+
+.reviews {
+    width: 100%;
+    padding: 1rem;
+}
+
+.reviews .title {
+    margin: 2rem 0;
+}
+
+.review-cards {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.review {
+    width: 350px;
+    background: var(--primary);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.review figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-pic {
+    width: 100px;
+}
+
+.stars {
+    width: 150px;
+    margin: 1rem 0;
+}
+
+.review-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+
+    text-decoration: none;
+    color: var(--contrast);
+    margin: 1rem 0;
+}
+
+.google-img {
+    width: 20px;
+}
+
+.reviwer {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--contrast);
+}
+
+/*Map section*/
+
+.map .title {
+    margin: 2rem 0;
+}
+
+.address {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--contrast);
+
+    margin: 2rem 0;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding: 2rem 5%;
+    background: var(--secondary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer img {
+    width: 350px;
+    align-items: center;
+}
+
+.link-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 33%;
+}
+
+.legal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+
+    width: 33%;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .review-cards {
+        flex-wrap: wrap;
+    }
+}
