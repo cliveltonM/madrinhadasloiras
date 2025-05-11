@@ -5,6 +5,8 @@
     --white: #fff;
 }
 
+/*General Settings*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,12 @@
 img {
     width: 100%;
 }
+
+body a, body a:visited {
+    text-decoration: none;
+}
+
+/*Page Elements*/
 
 .container {
     width: 90vw;
@@ -40,7 +48,6 @@ nav {
 }
 
 nav a {
-    text-decoration: none;
     color: var(--contrast);
     transition: opacity ease-in-out .2s;
 }
@@ -357,7 +364,6 @@ main {
     justify-content: center;
     gap: .3rem;
 
-    text-decoration: none;
     color: var(--contrast);
     margin: 1rem 0;
 }
@@ -396,7 +402,6 @@ main {
 }
 
 .footer a {
-    text-decoration: none;
     color: var(--white);
 }
 
