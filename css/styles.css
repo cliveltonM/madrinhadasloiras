@@ -2,7 +2,7 @@
     --primary: #EFCCB8;
     --secondary: #DE7778;
     --contrast: #560A20;
-    --white: #fff;
+    --white: #000;
 }
 
 /*General Settings*/
@@ -72,6 +72,11 @@ nav a:hover {
 
 .social svg:hover {
     opacity: .8;
+}
+
+.social a, .social a:visited {
+    text-decoration: none;
+    color: transparent;
 }
 
 main {
@@ -181,7 +186,7 @@ main {
     left: 0;
     right: 0;
     z-index: -300;
-    background: var(--white);
+    background: #fff;
 
     border-radius: 50%;
 }
